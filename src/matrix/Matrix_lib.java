@@ -95,7 +95,23 @@ public class Matrix_lib {
 	   answer = this.getTranspose(answer);
 	   return answer;
    }
+   public double[] getSolution(double d[][],double e[]) {
+	   double ans[] = new double[d.length];
+	   d = this.getInverse(d);
+	 
+	  for(int i = 0; i <d.length; i++) {
+		  for(int j = 0; j < d.length; j++) {
+			  ans[i]  += d[i][j] * e[j];
+		  }
+		  
+   		}
+   		
+	   
+	   return ans;
+	   
+   }
 	  
+   
 }
 	
 	
